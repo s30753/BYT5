@@ -25,6 +25,7 @@ namespace DesignPattern.Observer
         //5. Observer will get a notification from the Subject using the following Method
         public void Update(string availability)
         {
+            // informs the user about the change of the availability of the product
             Console.WriteLine($"Dear {UserName}, we inform that currently the product is {availability}.");
         }
     
