@@ -5,12 +5,14 @@ namespace DesignPattern.Adapter
     {
         private readonly BillingSystem thirdPartyBillingSystem = new();
 
+        //converting array of strings with employee data to a list of employees suitable for BillingSystem
         public void ProcessCompanySalary(string[,] employeesArray)
         {
             List<Employee> employeeList = new List<Employee>();
 
             int rows = employeesArray.GetLength(0);
 
+            //taking data from the array and each row being one Employee, and afterward adding employee to the employeeList
             for (int i = 0; i < rows; i++)
             {
                 int id = int.Parse(employeesArray[i, 0]);
