@@ -19,6 +19,7 @@ class Program
     // No need to replace this code, it should work after implementing proper factory design pattern
     static void dbEngines()
     {
+        //we just use .CreateDatabas() thanks to our DatabaseFactory and we connect to different databases
         var sqlEngine = new DataAnalyticsEngine(DatabaseFactory.CreateDatabase(DatabaseType.SqlServer));
         sqlEngine.ProcessData("Query to process data for SQL Server");
 

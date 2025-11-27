@@ -4,6 +4,7 @@
     {
         public static IDatabase CreateDatabase(DatabaseType type)
         {
+            //opens different types of databases -> our code is not database-dependent
             switch (type)
             {
                 case DatabaseType.SqlServer:
